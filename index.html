@@ -97,10 +97,43 @@
         var roman = romanizer(event.target[0].value); // why [0]?
         var result = document.getElementById('js-result');
         result.textContent = roman;
+        document.getElementById('numberInput').value = '';
+
+      }); // <body>
+      //    <main class="container">
+      //
+      //      <h1>Roman Numeral Converter</h1>
+      //      <form class="form" id="js-form">
+      //        <label class="form__input" for="numberInput"></label>
+      //        <div class="form__row">
+      //          <input class="form__input" type="text" placeholder="Enter a number" id="numberInput" required autofocus>
+      //          <button class="form__btn" type="button" id="formButton">Submit</button>
+      //        </div>
+      //      </form>
+      //      <div class="result" id="js-result">
+      //      </div>
+      //    </main>
+      //
+      //    <script type="text/javascript" src="romanizer.js">
+    </script>
+
+    <script>
+      //      var button = document.getElementById('formButton');
+      //      button.addEventListener('click', function(event) {
+      //        var input = document.getElementById('numberInput');
+      //        var roman = romanizer(input.value);
+      //        var result = document.getElementById('js-result');
+      //        result.textContent = roman;
+      //        input.value = '';
+      //      });
+    </script>
+
+
         //document.getElementById('js-result').textContent = '';
         //why isn't this line working?
 
       });
+
     </script>
   </body>
 
