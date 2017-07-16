@@ -46,6 +46,11 @@ function romanizer(num) {
 
   var remaining = num;
   var result = '';
+  
+  if (typeof num !== 'number') {
+    return 'Sorry, I can only convert numbers';
+  }
+
 
   if (typeof num !== 'number') {
     return 'Sorry, I can only convert numbers';
@@ -54,7 +59,7 @@ function romanizer(num) {
   // if (typeof num !== '') {
   //   return 'Sorry, I can only convert numbers';
   // }
-
+  
   if (num >= 5000) {
     return 'Please submit a value less than 5000';
   }
@@ -72,8 +77,6 @@ function romanizer(num) {
 
 
 if (typeof module !== "undefined") {
-
-if (typeof module !== undefined) {
 
   module.exports = romanizer;
 }
