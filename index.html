@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <title>Romanizer</title>
+  <style>
+    * {
+
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+    }
+
+    .container {
+      max-width: 40em;
+      margin: 10% auto;
+
+      padding: 2em;
+    }
+
+    input,
+    button {
+      width: 100%;
+      padding: 0.5em;
+      display: block;
+      font-size: inherit;
+      font-family: inherit;
+      background: none;
+      border: 2px solid #868286;
+      border-radius: none;
+      color: inherit;
+    }
+
+    .form__row {
+      margin-top: 0.8em;
+      display: flex;
+    }
+
+    .form__input:focus {
+      outline: 2px solid #64c2ce;
+    }
+
+    .form__btn {
+      background-color: #64c2ce;
+      color: #fff;
+      border: none;
+      margin-left: 0.5em;
+    }
+
+    .form__btn:hover {
+      background-color: #37a0ae;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+    }
+
+    .result {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 3em;
+      font-size: 1em;
+      border: 2px solid #868286;
+      margin-top: 1em;
+    }
+  </style>
+  <!--what the fuck is display flex?-->
+
+  <body>
+    <main class="container">
+
+      <h1>Roman Numeral Converter</h1>
+      <form class="form" id="js-form">
+        <label class="form__input" for="numberInput"></label>
+        <div class="form__row">
+          <input class="form__input" type="text" placeholder="Enter a number" id="numberInput" required autofocus>
+          <button class="form__btn" type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="result" id="js-result">
+      </div>
+
+
+    </main>
+
+    <script type="text/javascript" src="romanizer.js"></script>
+    <script>
+      var form = document.getElementById('js-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); //what does this do?
+        var roman = romanizer(event.target[0].value); // why [0]?
+        var result = document.getElementById('js-result');
+        result.textContent = roman;
+        document.getElementById('numberInput').value = '';
+
+      }); // <body>
+      //    <main class="container">
+      //
+      //      <h1>Roman Numeral Converter</h1>
+      //      <form class="form" id="js-form">
+      //        <label class="form__input" for="numberInput"></label>
+      //        <div class="form__row">
+      //          <input class="form__input" type="text" placeholder="Enter a number" id="numberInput" required autofocus>
+      //          <button class="form__btn" type="button" id="formButton">Submit</button>
+      //        </div>
+      //      </form>
+      //      <div class="result" id="js-result">
+      //      </div>
+      //    </main>
+      //
+      //    <script type="text/javascript" src="romanizer.js">
+    </script>
+
+    <script>
+      //      var button = document.getElementById('formButton');
+      //      button.addEventListener('click', function(event) {
+      //        var input = document.getElementById('numberInput');
+      //        var roman = romanizer(input.value);
+      //        var result = document.getElementById('js-result');
+      //        result.textContent = roman;
+      //        input.value = '';
+      //      });
+    </script>
+
+
+    </script>
+  </body>
+
+</html>
