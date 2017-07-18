@@ -46,9 +46,10 @@ function romanizer(num) {
 
   var remaining = num;
   var result = '';
-  if (typeof num !== 'number') {
-    return 'Sorry, I can only convert numbers';
-  }
+
+  // if (num == NaN) {
+  //   return 'Sorry, I can only convert numbers';
+  // }
   if (num >= 5000) {
     return 'Please submit a value less than 5000';
   }
