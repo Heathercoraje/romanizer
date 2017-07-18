@@ -100,7 +100,9 @@
       var form = document.getElementById('js-form');
       form.addEventListener('submit', function(event) {
         event.preventDefault(); //what does this do?
-        var roman = romanizer(event.target[0].value); // why [0]?
+        console.log(Number(event.target[0].value)); //what does this do?
+        var roman = romanizer(Number(event.target[0].value));
+        // why [0]?
         var result = document.getElementById('js-result');
         result.textContent = roman;
         document.getElementById('numberInput').value = '';
