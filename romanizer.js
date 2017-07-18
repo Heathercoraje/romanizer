@@ -47,9 +47,11 @@ function romanizer(num) {
   var remaining = num;
   var result = '';
 
-  // if (num == NaN) {
+    // if (typeof num !== '') {
   //   return 'Sorry, I can only convert numbers';
   // }
+  
+
   if (num >= 5000) {
     return 'Please submit a value less than 5000';
   }
@@ -65,6 +67,8 @@ function romanizer(num) {
   return result;
 }
 
+
 if (typeof module !== "undefined") {
+
   module.exports = romanizer;
 }
